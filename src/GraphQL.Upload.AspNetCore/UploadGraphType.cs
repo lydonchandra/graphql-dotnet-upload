@@ -3,7 +3,7 @@ using GraphQL.Types;
 using Microsoft.AspNetCore.Http;
 
 namespace GraphQL.Upload.AspNetCore
-{
+{    
     public class UploadGraphType : ScalarGraphType
     {
         public UploadGraphType()

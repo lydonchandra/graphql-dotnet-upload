@@ -31,7 +31,8 @@ namespace GraphQL.Upload.AspNetCore
 
         public async Task InvokeAsync(HttpContext context)
         {
-            if (!context.Request.HasFormContentType)
+            if (!context.Request.HasFormContentType 
+                || context.Request.Path.Value.ToLower().Contains("/identity/account"))
             {
                 await _next(context);
                 return;
